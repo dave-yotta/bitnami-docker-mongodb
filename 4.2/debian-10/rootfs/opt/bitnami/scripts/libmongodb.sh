@@ -573,7 +573,6 @@ EOF
         warn "Node already initialized."
         return 0
     fi
-    grep -q "\"ok\" : 1" <<< "$result"
     
     if ! grep -q "\"ok\" : 1" <<< "$result"; then
         warn "Problem initating replica set
